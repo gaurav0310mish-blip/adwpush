@@ -20,7 +20,7 @@ DECLARE
             /* raw folder (actual S3 folder) */
             REGEXP_SUBSTR(object_name, '^[^/]+') AS raw_folder
         FROM DBMS_CLOUD.LIST_OBJECTS(
-               credential_name => 'AWS_S3_AIDP_CRED',
+               credential_name => 'AWS_S3_CRED',
                location_uri    => 'https://s3.ap-south-1.amazonaws.com/snowflakes-iceberg-bucket/'
              )
         WHERE LOWER(object_name) LIKE '%.parquet';
