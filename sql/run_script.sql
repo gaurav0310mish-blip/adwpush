@@ -1,0 +1,9 @@
+SET echo on
+SET timing on
+
+CREATE TABLE IF NOT EXISTS CICD_PIPELINE_TEST AS
+SELECT systimestamp AS executed_at FROM dual;
+
+SELECT COUNT(*) FROM CICD_PIPELINE_TEST;
+
+EXIT;
